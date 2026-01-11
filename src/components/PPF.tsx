@@ -15,12 +15,14 @@ const PPF = () => {
     {
       icon: Eye,
       title: 'Crystal Clear',
-      description: 'Virtually invisible protection that preserves your paint\'s appearance',
+      description:
+        "Virtually invisible protection that preserves your paint's appearance",
     },
     {
       icon: Award,
       title: 'Warranty Backed',
-      description: '10-year manufacturer warranty against yellowing and cracking',
+      description:
+        '10-year manufacturer warranty against yellowing and cracking',
     },
   ];
 
@@ -36,33 +38,40 @@ const PPF = () => {
   ];
 
   return (
-    <section id="ppf" className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900">
+    <section
+      id="ppf"
+      className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
               Paint Protection Film
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            The ultimate invisible armor for your vehicle. Our premium PPF protects your investment
-            while maintaining the factory finish you love.
+            The ultimate invisible armor for your vehicle. Our premium PPF protects
+            your investment while maintaining the factory finish you love.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Features */}
           <div className="space-y-6">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-900 to-black border border-amber-500/20 rounded-xl p-6 hover:border-amber-500/50 transition-all"
+                className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-xl p-6 hover:border-gray-400/60 transition-all"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0 w-12 h-12 bg-amber-500/10 rounded-lg flex items-center justify-center">
-                    <feature.icon className="h-6 w-6 text-amber-500" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center">
+                    <feature.icon className="h-6 w-6 text-gray-300" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-gray-400">{feature.description}</p>
                   </div>
                 </div>
@@ -70,22 +79,31 @@ const PPF = () => {
             ))}
           </div>
 
+          {/* Coverage */}
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Coverage Options</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Coverage Options
+            </h3>
+
             <div className="grid grid-cols-2 gap-4">
               {coverage.map((area, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-900 to-black border border-amber-500/20 rounded-lg p-4 text-center hover:border-amber-500/50 transition-all"
+                  className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-lg p-4 text-center hover:border-gray-400/60 transition-all"
                 >
                   <p className="text-white font-medium">{area}</p>
                 </div>
               ))}
             </div>
 
+            {/* Button */}
             <button
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full mt-8 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transform hover:scale-105 transition-all shadow-lg shadow-amber-500/50"
+              onClick={() =>
+                document
+                  .getElementById('pricing')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
+              className="w-full mt-8 px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
             >
               View PPF Pricing
             </button>

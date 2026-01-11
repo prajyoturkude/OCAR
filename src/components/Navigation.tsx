@@ -38,7 +38,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
 >
   <img
     src={logo}
-    alt="Elite Detailing Logo"
+    alt="OCAR Logo"
     className="h-28 w-auto"
   />
 

@@ -51,9 +51,10 @@ const Packages = () => {
   return (
     <section id="packages" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
               Service Packages
             </span>
           </h2>
@@ -62,42 +63,54 @@ const Packages = () => {
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => (
             <div
               key={index}
-              className={`relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden ${
+              className={`relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden transition-all ${
                 pkg.popular
-                  ? 'border-2 border-amber-500 transform scale-105'
-                  : 'border border-amber-500/20'
+                  ? 'border-2 border-white scale-105 shadow-lg shadow-white/20'
+                  : 'border border-gray-700/40'
               }`}
             >
+              {/* Popular badge */}
               {pkg.popular && (
-                <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-amber-600 text-black px-4 py-1 text-sm font-semibold rounded-bl-lg">
+                <div className="absolute top-0 right-0 bg-gradient-to-r from-white to-gray-300 text-black px-4 py-1 text-sm font-semibold rounded-bl-lg">
                   MOST POPULAR
                 </div>
               )}
 
               <div className="p-8">
-                <pkg.icon className="h-12 w-12 text-amber-500 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">{pkg.name}</h3>
+                <pkg.icon className="h-12 w-12 text-gray-300 mb-4" />
+
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {pkg.name}
+                </h3>
+
                 <p className="text-gray-400 mb-6">{pkg.description}</p>
 
+                {/* Features */}
                 <div className="space-y-3 mb-8">
                   {pkg.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+                      <div className="w-1.5 h-1.5 bg-gray-300 rounded-full"></div>
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
                 </div>
 
+                {/* Button */}
                 <button
-                  onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() =>
+                    document
+                      .getElementById('pricing')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }
                   className={`w-full px-6 py-3 font-semibold rounded-lg transition-all ${
                     pkg.popular
-                      ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black hover:from-amber-400 hover:to-amber-500 shadow-lg shadow-amber-500/50'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-amber-500/30'
+                      ? 'bg-gradient-to-r from-white to-gray-300 text-black hover:from-gray-200 hover:to-white shadow-lg shadow-white/30'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-gray-700/40'
                   }`}
                 >
                   View Pricing

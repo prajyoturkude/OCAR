@@ -21,7 +21,7 @@ const Footer = () => {
 >
   <img
     src={logo}
-    alt="Elite Detailing Logo"
+    alt="OCAR Logo"
     className="h-28 w-auto"
   />
 
@@ -96,7 +96,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-amber-500/20 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Elite Detailing. All rights reserved.</p>
+          <p>&copy; {currentYear} OCAR. All rights reserved.</p>
         </div>
       </div>
     </footer>

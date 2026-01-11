@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Car } from 'lucide-react';
 
 const Pricing = () => {
-  const [selectedVehicle, setSelectedVehicle] = useState<'hatchback' | 'sedan' | 'suv' | 'luxury'>('sedan');
+  const [selectedVehicle, setSelectedVehicle] = useState<
+    'hatchback' | 'sedan' | 'suv' | 'luxury'
+  >('sedan');
 
   const vehicleTypes = [
     { id: 'hatchback' as const, name: 'Hatchback', description: 'Compact cars' },
@@ -56,11 +58,15 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900">
+    <section
+      id="pricing"
+      className="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-amber-500 to-amber-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
               Transparent Pricing
             </span>
           </h2>
@@ -69,6 +75,7 @@ const Pricing = () => {
           </p>
         </div>
 
+        {/* Vehicle Selector */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {vehicleTypes.map((type) => (
             <button
@@ -76,8 +83,8 @@ const Pricing = () => {
               onClick={() => setSelectedVehicle(type.id)}
               className={`flex items-center space-x-3 px-6 py-4 rounded-lg font-semibold transition-all ${
                 selectedVehicle === type.id
-                  ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg shadow-amber-500/50'
-                  : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-amber-500/20'
+                  ? 'bg-gradient-to-r from-white to-gray-300 text-black shadow-lg shadow-white/30'
+                  : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-700/40'
               }`}
             >
               <Car className="h-5 w-5" />
@@ -89,24 +96,29 @@ const Pricing = () => {
           ))}
         </div>
 
-        <div className="bg-gradient-to-br from-gray-900 to-black border border-amber-500/20 rounded-2xl overflow-hidden">
+        {/* Pricing Table */}
+        <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-2xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="bg-amber-500/10 border-b border-amber-500/20">
-                  <th className="text-left p-6 text-white font-semibold">Service</th>
-                  <th className="text-right p-6 text-white font-semibold">Price</th>
+                <tr className="bg-white/5 border-b border-gray-700/40">
+                  <th className="text-left p-6 text-white font-semibold">
+                    Service
+                  </th>
+                  <th className="text-right p-6 text-white font-semibold">
+                    Price
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {services.map((service, index) => (
                   <tr
                     key={index}
-                    className="border-b border-amber-500/10 hover:bg-amber-500/5 transition-colors"
+                    className="border-b border-gray-700/30 hover:bg-white/5 transition-colors"
                   >
                     <td className="p-6 text-gray-300">{service.name}</td>
                     <td className="p-6 text-right">
-                      <span className="text-2xl font-bold text-amber-500">
+                      <span className="text-2xl font-bold text-white">
                         {pricing[selectedVehicle][service.key]}
                       </span>
                     </td>
@@ -117,13 +129,19 @@ const Pricing = () => {
           </div>
         </div>
 
+        {/* CTA */}
         <div className="mt-12 text-center">
           <p className="text-gray-400 mb-6">
-            All prices include materials and labor. Custom quotes available for specialized services.
+            All prices include materials and labor. Custom quotes available for
+            specialized services.
           </p>
           <button
-            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-black font-semibold rounded-lg hover:from-amber-400 hover:to-amber-500 transform hover:scale-105 transition-all shadow-lg shadow-amber-500/50"
+            onClick={() =>
+              document
+                .getElementById('contact')
+                ?.scrollIntoView({ behavior: 'smooth' })
+            }
+            className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
           >
             Request Custom Quote
           </button>
