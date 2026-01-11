@@ -51,12 +51,17 @@ const Hero = () => {
             </button>
 
             <button
-              onClick={() =>
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-              }
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 border border-gray-500/40 transition-all"
-            >
-              Get a Quote
+              
+            >  
+            <a
+  href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 border border-gray-500/40 transition-all inline-block text-center"
+>
+  BOOK APPOINTMENT
+</a>
+           
             </button>
           </div>
 

@@ -102,18 +102,18 @@ const Packages = () => {
 
                 {/* Button */}
                 <button
-                  onClick={() =>
-                    document
-                      .getElementById('pricing')
-                      ?.scrollIntoView({ behavior: 'smooth' })
-                  }
-                  className={`w-full px-6 py-3 font-semibold rounded-lg transition-all ${
-                    pkg.popular
-                      ? 'bg-gradient-to-r from-white to-gray-300 text-black hover:from-gray-200 hover:to-white shadow-lg shadow-white/30'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-gray-700/40'
-                  }`}
-                >
-                  View Pricing
+                 ><a
+  href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+  className={`w-full ml-10 px-6 py-3 font-semibold rounded-lg transition-all text-center inline-block ${
+    pkg.popular
+      ? 'bg-gradient-to-r from-white to-gray-300 text-black hover:from-gray-200 hover:to-white shadow-lg shadow-white/30'
+      : 'bg-white/10 text-white hover:bg-white/20 border border-gray-700/40'
+  }`}
+>
+  BOOK APPOINTMENT
+</a>
+
+                 
                 </button>
               </div>
             </div>

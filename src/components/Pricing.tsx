@@ -136,14 +136,16 @@ const Pricing = () => {
             specialized services.
           </p>
           <button
-            onClick={() =>
-              document
-                .getElementById('contact')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-            className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
-          >
-            Request Custom Quote
+             >
+            <a
+  href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30 inline-block text-center"
+>
+  Request Custom Quote
+</a>
+           
           </button>
         </div>
       </div>

@@ -67,12 +67,14 @@ const CeramicCoating = () => {
 
             {/* Button */}
             <button
-              onClick={() =>
-                document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })
-              }
-              className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
-            >
-              View Ceramic Coating Pricing
+           >
+              <a
+  href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+  className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30 inline-block text-center"
+>
+  BOOK APPOINTMENT
+</a>
+            
             </button>
           </div>
 

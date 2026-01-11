@@ -98,14 +98,13 @@ const PPF = () => {
 
             {/* Button */}
             <button
-              onClick={() =>
-                document
-                  .getElementById('pricing')
-                  ?.scrollIntoView({ behavior: 'smooth' })
-              }
-              className="w-full mt-8 px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
-            >
-              View PPF Pricing
+              >
+             <a
+  href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+  className="w-full ml-32 mt-4 px-8 py-4  bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30 inline-block text-center"
+>
+  BOOK APPOINTMENT
+</a>
             </button>
           </div>
         </div>
