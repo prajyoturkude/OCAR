@@ -10,6 +10,9 @@ import {
   SprayCan,
 } from 'lucide-react';
 
+const BOOKING_LINK =
+  'https://2026.geteasysoftware.com/ocar_customs/webapp/';
+
 const ServicesPages = () => {
   const mainServices = [
     {
@@ -108,8 +111,11 @@ const ServicesPages = () => {
         {/* MAIN 6 SERVICES */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
           {mainServices.map((service, index) => (
-            <div
+            <a
               key={index}
+              href={BOOKING_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-xl overflow-hidden hover:border-gray-400/60 transition-all hover:scale-105 h-[28rem]"
             >
               <div
@@ -123,7 +129,7 @@ const ServicesPages = () => {
                 </h3>
                 <p className="text-gray-400">{service.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -155,7 +161,7 @@ const ServicesPages = () => {
         {/* CTA */}
         <div className="text-center mt-20">
           <a
-            href="https://2026.geteasysoftware.com/ocar_customs/webapp/"
+            href={BOOKING_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block px-10 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:scale-105 transition-all shadow-lg shadow-white/30"
@@ -168,7 +174,7 @@ const ServicesPages = () => {
   );
 };
 
-/* 🔹 Reusable Service Group Component */
+/* 🔹 Reusable Service Group */
 const ServiceGroup = ({
   title,
   icon: Icon,
@@ -186,12 +192,15 @@ const ServiceGroup = ({
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {items.map((item, index) => (
-        <div
+        <a
           key={index}
-          className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-lg p-5 hover:border-gray-400/60 transition"
+          href={BOOKING_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-br from-gray-900 to-black border border-gray-700/40 rounded-lg p-5 hover:border-gray-400/60 transition hover:scale-[1.02]"
         >
           <p className="text-gray-300">{item}</p>
-        </div>
+        </a>
       ))}
     </div>
   </div>
