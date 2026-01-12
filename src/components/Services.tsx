@@ -1,6 +1,12 @@
 import { Sparkles, Shield, Droplets, Wind, Zap, Star } from 'lucide-react';
 
+import { useNavigate } from 'react-router-dom';
+
+
+
+
 const Services = () => {
+  const navigate = useNavigate(); // 
   const services = [
     {
       icon: Shield,
@@ -93,12 +99,20 @@ const Services = () => {
 
         {/* Button */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-          <button
+          {/* <button
             onClick={scrollToContact}
             className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
           >
             Explore Services
-          </button>
+          </button> */}
+<button
+  onClick={() => window.location.href = '/services'}
+  className="px-8 py-4 bg-gradient-to-r from-white to-gray-300 text-black font-semibold rounded-lg hover:from-gray-200 hover:to-white transform hover:scale-105 transition-all shadow-lg shadow-white/30"
+>
+  Explore Services
+</button>
+
+
         </div>
       </div>
     </section>
